@@ -4,6 +4,8 @@ module Api::V1
   describe QuestionsController, type: :controller do
     render_views
 
+    include_context 'authorize'
+
     let!(:asker) { create(:user) }
     let!(:provider) { create(:user) }
     let!(:answer) do

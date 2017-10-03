@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :tenant do
+    name { FFaker::Name.name }
+    api_key { FFaker::Random.seed }
+  end
+
   factory :user do
     name { FFaker::Name.name }
   end
