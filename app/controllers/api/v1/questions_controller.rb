@@ -1,7 +1,10 @@
 module Api::V1
   class QuestionsController < ApplicationController
     def index
-      @questions = Question.public_questions
+      @questions = Question.includes(
+                     :asker,
+                     { answers: :provider }
+                   ).public_questions
     end
 
     def show
