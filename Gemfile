@@ -28,6 +28,7 @@ end
 group :test do
   gem 'rspec-rails', '~> 3.6.1'
   gem 'factory_girl', '~> 4.8.1'
+  gem 'shoulda-matchers', '~> 3.1.2'
 end
 
 gem 'ffaker'
