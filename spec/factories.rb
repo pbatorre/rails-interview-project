@@ -8,4 +8,9 @@ FactoryGirl.define do
     title { FFaker::HipsterIpsum.sentence.gsub(/\.$/, "?") }
   end
 
+  factory :answer do
+    question
+    body FFaker::HipsterIpsum.sentence
+    association :provider, factory: :user
+  end
 end
