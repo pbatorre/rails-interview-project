@@ -6,10 +6,23 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
 
   def authorize
-    if tenant = Tenant.find_by(api_key: request.env['Authorization'])
+    if tenant
       tenant.increment!(:request_count)
     else
       head :unauthorized
     end
   end
+
+  private
+
+  def tenant
+    @tenant ||= Tenant.find do |tenant|
+      ActiveSupport::SecurityUtils.secure_compare(tenant.api_key, auth_param)
+    end
+  end
+
+  def auth_param
+    @auth_param ||= request.env['Authorization']
+  end
+
 end
