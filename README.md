@@ -1,8 +1,4 @@
-# Batteries 911 Rails Engineer Candidate Interview Project
-
-(This is a fork of the [Kaleo Rails Engineer Candidate Interview Project](https://github.com/batteries911/rails-interview-project).)
-
-Thanks for taking the time to complete this exercise. We're excited that you're considering joining our amazing team.
+# Rails Engineer Candidate Interview Project
 
 This Rails application is a basic skeleton of an app that serves an API about questions and answers. It already includes 4 basic models:
 
@@ -24,21 +20,3 @@ A Tenant is a consumer of the API you are going to write. A db/seeds.rb file is 
 *   Add tests around the code you write as you deem appropriate. Assume that the API cannot be changed once it's released and test accordingly.
 *   You are welcome to add any models or other code you think you need, as well as any gems.
 *   You are also free the modify the existing code however you see fit.
-
-## Project Setup
-
-Clone this repo locally, and from the top-level directory run:
-
-`bundle install`
-
-`bundle exec rake db:setup`
-
-To make sure it's all working,
-
-`rails s`
-
-You should see this same information.
-
-## Submitting your project
-
-Fork this repo and give us access to your fork.  If you need to add any additional instructions to the README please put them at the very top of that file and mention.  Expect to discuss your design decisions during the interview.
